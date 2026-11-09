@@ -23,8 +23,51 @@ section{padding:120px 8vw}.section-head{display:flex;justify-content:space-betwe
 .cta{padding:120px 8vw;background:linear-gradient(110deg,rgba(5,6,8,.92),rgba(5,6,8,.68)),url("reflection%206.jpg") center/cover fixed;position:relative}.cta-inner{max-width:850px}.cta h2{font:800 clamp(62px,10vw,135px)/.82 "Barlow Condensed";text-transform:uppercase;letter-spacing:-.04em;margin:25px 0}.cta h2 span{color:var(--red)}.cta p{max-width:430px;color:#bbb;font-size:13px;line-height:1.9}
 footer{padding:55px 8vw 28px;background:#050607;border-top:1px solid var(--line)}.footer-top{display:flex;justify-content:space-between;align-items:center;gap:25px;padding-bottom:45px}.footer-logo{width:180px}.footer-links{display:flex;gap:25px;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#bbb}.footer-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;color:#777;font-size:10px;letter-spacing:.1em}.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}.about-image img{transform:scale(1.1);transition:transform 1.35s cubic-bezier(.2,.7,.2,1),filter 1s}.about-image.visible img{transform:scale(1)}.about-image.visible:hover img{transform:scale(1.045)}.service:nth-child(2){transition-delay:.08s}.service:nth-child(3){transition-delay:.16s}.service:nth-child(4){transition-delay:.24s}.hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>.hero-sub,.hero-copy>.actions{opacity:0;animation:heroTextIn .9s cubic-bezier(.16,1,.3,1) forwards}.hero-copy>.eyebrow{animation-delay:.15s}.hero-copy>h1{animation-delay:.3s}.hero-copy>.hero-sub{animation-delay:.48s}.hero-copy>.actions{animation-delay:.62s}.brand img{transition:filter .4s,transform .5s}.brand:hover img{filter:drop-shadow(0 0 12px rgba(237,28,46,.4));transform:scale(1.05)}
 @keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes videoArrive{0%{opacity:0;transform:translate3d(0,42px,0) scale(.94);clip-path:inset(8% 5% 8% 5%)}100%{opacity:1;transform:translate3d(0,0,0) scale(1);clip-path:inset(0)}}@keyframes heroTextIn{from{opacity:0;transform:translateY(34px);filter:blur(7px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
-@media(max-width:760px){header{height:70px;padding:0 5vw}.brand{gap:9px}.brand img{width:43px;height:46px}.brand-name{font-size:21px;letter-spacing:.13em}.menu{display:block}.nav{display:none;position:absolute;top:70px;left:0;right:0;padding:25px 6vw 30px;background:#08090b;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid var(--line)}.nav.open{display:flex}.hero{min-height:92svh;padding:0 6vw 12vh}.hero:after{background:linear-gradient(0deg,#08090b 0%,rgba(3,4,6,.55) 54%,rgba(3,4,6,.22) 100%)}.hero-media img{display:none}.hero-media video{display:block;inset:0;width:100%;height:100%;right:auto;top:auto;object-fit:cover;opacity:.88;border:0;box-shadow:none}.hero h1{font-size:clamp(75px,20vw,125px);margin:23px 0}.hero-sub{font-size:12px;max-width:330px}.scroll-note{display:none}.actions{gap:9px}.btn{padding:15px 17px;font-size:9px}.marquee{padding:14px 0}section{padding:82px 6vw}.section-head{display:block;margin-bottom:34px}.section-intro{margin-top:22px}.about{grid-template-columns:1fr;gap:35px}.about-image{height:430px;order:2}.about-copy{order:1}.about-mark{font-size:78px}.service-grid{grid-template-columns:1fr}.service{min-height:0;padding:26px 0}.service:nth-child(odd){margin:0}.service:nth-child(even){padding-left:0;border-left:0}.service h3{font-size:30px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:240px 190px 190px}.gallery-item:first-child{grid-column:span 2;grid-row:auto}.cta{padding:85px 6vw;background-attachment:scroll}.footer-top{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap;gap:18px}.footer-bottom{gap:12px;flex-direction:column}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal,.hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>.hero-sub,.hero-copy>.actions{opacity:1;transform:none;filter:none}.gallery-item img,.about-image img{opacity:1;transform:none}}
+@media(max-width:760px){
+html,body{width:100%;overflow-x:hidden}
+header{height:68px;padding:0 5vw}
+.brand{gap:8px;min-width:0}.brand img{width:40px;height:43px}.brand-name{font-size:20px;letter-spacing:.1em}
+.menu{display:block;flex:0 0 auto;padding:6px}
+.nav{display:none;position:absolute;top:68px;left:0;right:0;padding:24px 6vw 28px;background:#08090b;flex-direction:column;align-items:flex-start;gap:22px;border-bottom:1px solid var(--line)}.nav.open{display:flex}
+.hero{min-height:0;height:auto;padding:94px 6vw 58px;display:flex;flex-direction:column;align-items:stretch;gap:0;overflow:hidden}
+.hero:after{display:none}
+.hero-media{position:relative;inset:auto;z-index:0;width:100%;height:auto;aspect-ratio:16/10;order:0;margin:0 0 30px;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:0 18px 48px rgba(0,0,0,.38)}
+.hero-media img{display:none}
+.hero-media video{display:block;position:absolute;inset:0;right:auto;top:auto;width:100%;height:100%;object-fit:cover;opacity:1;border:0;box-shadow:none;animation:videoArrive 1s cubic-bezier(.16,1,.3,1) .1s both}
+.hero-copy{order:1;position:relative;z-index:2;width:100%;max-width:none;padding:0}
+.eyebrow{font-size:9px;letter-spacing:.24em;gap:10px}.eyebrow:before{width:25px;flex:0 0 25px}
+.hero h1{font-size:clamp(68px,17vw,112px);line-height:.84;letter-spacing:-.04em;margin:19px 0 20px}
+.hero-sub{font-size:13px;line-height:1.8;max-width:100%;margin-bottom:0}
+.actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.btn{padding:15px 14px;font-size:9px;letter-spacing:.1em;gap:10px;min-height:46px}
+.scroll-note{display:none}.marquee{padding:14px 0}.marquee-track{gap:25px;font-size:12px}
+section{padding:76px 6vw}.section-head{display:block;margin-bottom:32px}
+.section-title{font-size:clamp(48px,12vw,76px);line-height:.9}
+.section-intro{margin-top:19px;font-size:12px;line-height:1.8}
+.about{display:flex;flex-direction:column;gap:28px;align-items:stretch}
+.about-copy{order:0;width:100%;min-width:0}.about-image{order:1;width:100%;height:auto;aspect-ratio:4/5;min-height:0}
+.about-copy .section-title{margin-bottom:23px}.about-copy p{font-size:13px;line-height:1.85}
+.about-mark{font-size:clamp(54px,15vw,78px);line-height:.9;overflow-wrap:anywhere}
+.services{padding-top:76px;padding-bottom:76px}.service-grid{grid-template-columns:minmax(0,1fr)}
+.service{width:100%;min-height:0;padding:24px 0;gap:15px;align-items:flex-start}
+.service:nth-child(odd){margin:0}.service:nth-child(even){padding:24px 0;border-left:0}
+.service>div{min-width:0;flex:1}.service h3{font-size:29px;line-height:1.05;overflow-wrap:anywhere}
+.service p{font-size:12px;line-height:1.75;overflow-wrap:anywhere}.service-arrow{flex:0 0 auto;margin-left:0}
+.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:auto;gap:9px}
+.gallery-item{width:100%;aspect-ratio:4/3;min-width:0}
+.gallery-item:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+.cta{padding:82px 6vw;background-attachment:scroll}.cta h2{font-size:clamp(60px,15vw,100px);line-height:.86}.cta p{font-size:13px;line-height:1.8}
+.footer-top{align-items:flex-start;flex-direction:column;gap:28px;padding-bottom:32px}
+.footer-logo{width:145px;max-width:100%}.footer-links{flex-wrap:wrap;gap:16px 20px;line-height:1.7}
+.footer-bottom{gap:12px;flex-direction:column;line-height:1.7}
+}
+@media(max-width:380px){
+.brand img{width:35px}.brand-name{font-size:18px;letter-spacing:.08em}
+.hero{padding-left:5vw;padding-right:5vw}.hero h1{font-size:clamp(62px,16vw,82px)}
+.actions{align-items:stretch}.actions .btn{flex:1 1 100%;width:100%}
+.service h3{font-size:26px}section{padding-left:5vw;padding-right:5vw}
+}@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal,.hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>.hero-sub,.hero-copy>.actions{opacity:1;transform:none;filter:none}.gallery-item img,.about-image img{opacity:1;transform:none}}
 </style>
 </head>
 <body><div class="grain"></div>
